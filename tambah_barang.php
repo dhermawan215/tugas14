@@ -15,8 +15,7 @@ if (isset($_POST['submit'])) {
 
     if ($file_gambar['error'] == 0) {
         $filename = str_replace(' ', '_', $file_gambar['name']);
-        $destination = dirname(__FILE__) . '/gambar/' . $file_name;
-
+        $destination = dirname(__FILE__) . '/gambar/' . $filename;
         if (move_uploaded_file($file_gambar['tmp_name'], $destination)) {
             $gambar = 'gambar/' . $filename;
         }
